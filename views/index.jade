@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1 Math Machine!
+	input#entry(type='text' placeholder='Enter # to add up!')
+	input#submit(type="submit")
+	div
+	
+	div
+	a#random(href="#") Get Random Numbers
+	ul#numbers
+
+
+block scripts
+	script(src='/scripts/index.js')
