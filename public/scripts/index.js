@@ -31,6 +31,26 @@ $(function() {
 		})
 	})
 
+	$('#getNumbers').click(function(e){
+		e.preventDefault();
+
+		$('masterNumberList').empty();
+
+		$.get('/showtotal', function(data){
+			var numberTotal =0;
+			for (var i = 0; i < data.numbers.length; i++) {
+				var tempValue = data.numbers[i];
+				console.log('tempValue:', tempValue)
+				var numberTotal = tempValue + numberTotal;
+			}
+			$('#masterNumberList').append($('<li>').text('Total Value:' + numberTotal))
+			console.log(numberTotal)
+		});
+
+
+
+	});
+
 
 
 })

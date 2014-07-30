@@ -36,6 +36,9 @@ app.post('/entrypoint', function(req, res){
 	console.log(masterNumberObject)
 })
 
+app.get('/showtotal', function(req, res){
+	res.send(masterNumberObject);
+})
 
 var server = app.listen(6321, function() {
 	console.log('Express server listening on port ' + server.address().port);
